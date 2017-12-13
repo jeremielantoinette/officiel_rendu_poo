@@ -35,6 +35,21 @@ class Str{
 
 
 
+    public function camelCase(){
+        $magicarray = array('-', '_', '?');
+        $this->replace($magicarray , ' ');
+        $this->ucwords();
+        $this->replace(' ', '');
+        $this->lcfirst();
+
+
+        return $this;
+
+    }
+
+    public function toString(){
+        return $this->__toString();
+    }
 
 
 

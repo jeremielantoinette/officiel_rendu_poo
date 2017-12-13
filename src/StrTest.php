@@ -19,7 +19,16 @@ class Strtest extends TestCase{
         $this->assertSame('myString', $string);
     }
 
+    public function testExo15()
+    {
+        $string = Str::on('my_string')
+                ->camelCase()
+                ->toString();
 
+
+
+        $this->assertSame('myString', $string);
+    }
 
 /*essais avec point d'interrogation (TEST)
     public function testExo2()
