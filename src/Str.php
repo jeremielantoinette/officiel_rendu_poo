@@ -2,30 +2,30 @@
 namespace Strings;
 
 class Str{
-	private $string;
+    private $string;
 
-	public static function on(string $string){
-		return new self($string);
-	}
-	public function __construct(string $string)
-	{
-		$this->string = $string;
-	}
+    public static function on(string $string){
+        return new self($string);
+    }
+    public function __construct(string $string)
+    {
+        $this->string = $string;
+    }
 
-	public function replace($search, $replace){
+    public function replace($search, $replace){
 
-    $this->string = str_replace($search, $replace, $this->string);
-    return $this;
+        $this->string = str_replace($search, $replace, $this->string);
+        return $this;
     }
 
     public function __toString()
     {
-	    return $this->string;
+        return $this->string;
     }
 
     public function ucwords(){
-	    $this->string = ucwords($this->string);
-	    return $this;
+        $this->string = ucwords($this->string);
+        return $this;
     }
 
     public function lcfirst(){
@@ -33,9 +33,10 @@ class Str{
         return $this;
     }
 
-
+//exercie 2
 
     public function camelCase(){
+
         $magicarray = array('-', '_', '?');
         $this->replace($magicarray , ' ');
         $this->ucwords();
@@ -50,4 +51,16 @@ class Str{
     public function toString(){
         return $this->__toString();
     }
+
+
+
+
+
+
+
+
+
+
+
+
 }
