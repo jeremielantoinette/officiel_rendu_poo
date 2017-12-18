@@ -1,5 +1,5 @@
 <?php
-
+//
 namespace Strings;
 
 use PHPUnit\Framework\TestCase;
