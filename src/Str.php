@@ -50,12 +50,4 @@ class Str{
     public function toString(){
         return $this->__toString();
     }
-
-
-
-
-
-
-
-
 }
